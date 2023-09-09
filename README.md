@@ -60,7 +60,9 @@ Repositorio para organizar los códigos del proyecto
      ```
      git push origin [nombre_de_la_rama]
      ```
-![Descripción de la imagen 2](https://drive.google.com/uc?export=view&id=1T5k7XACxHmHoraFs1yVgthmx5ouXgTw_
+![Descripción de la imagen 2](https://drive.google.com/uc?export=view&id=1T5k7XACxHmHoraFs1yVgthmx5ouXgTw_)
+
+![Descripción de la imagen 3](https://drive.google.com/uc?export=view&id=1XBCEcIOTxDY0zse488XNgGoLHFBsY_-y)
 
 8. **Crear un Pull Request en GitHub**: 
    - Ve a tu repositorio en GitHub.
