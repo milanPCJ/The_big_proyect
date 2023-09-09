@@ -23,6 +23,8 @@ Repositorio para organizar los códigos del proyecto
      ```
      cd The_big_proyect
      ```
+![Descripción de la imagen](https://drive.google.com/uc?export=view&id=1VkVtdKfCdpAKFgg0-oNV65hOlcUePs-g)
+
 
 4. **Cambiar a una rama existente o crear una nueva**: 
    - Si la rama ya existe y deseas cambiar a ella:
@@ -33,6 +35,9 @@ Repositorio para organizar los códigos del proyecto
      ```
      git checkout -b [nombre_de_la_rama]
      ```
+
+![Descripción de la imagen](https://drive.google.com/uc?export=view&id=1Fhs0WOZ-Yt3PJhRiah7_dYBzLbot9dDa)
+
 
 5. **Verificar el estado de tus cambios con `git status`**: 
    - Antes de hacer cualquier operación, es una buena práctica verificar el estado de tus cambios. En la terminal, ingresa:
@@ -48,12 +53,14 @@ Repositorio para organizar los códigos del proyecto
      git add .
      git commit -m "Mensaje descriptivo"
      ```
+![Descripción de la imagen 1](https://drive.google.com/uc?export=view&id=1imTMfck6sb9Ox_K89Hf8a_pMfTD4o3lq)
 
 7. **Subir cambios a la rama en GitHub**: 
    - En la terminal, ingresa:
      ```
      git push origin [nombre_de_la_rama]
      ```
+![Descripción de la imagen 2](https://drive.google.com/uc?export=view&id=1T5k7XACxHmHoraFs1yVgthmx5ouXgTw_
 
 8. **Crear un Pull Request en GitHub**: 
    - Ve a tu repositorio en GitHub.
