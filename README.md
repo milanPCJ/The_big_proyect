@@ -15,7 +15,7 @@ Repositorio para organizar los códigos del proyecto
      ```
      git clone https://github.com/milanPCJ/The_big_proyect.git
      ```
-![Imagen de cómo clonar un repositorio]([link_a_imagen_de_clonar](https://drive.google.com/file/d/1-dsHYenf3qD8Q2HGAAkBlyI2cZYGHjXJ/view?usp=drive_link))
+![Imagen de cómo clonar un repositorio]([https://drive.google.com/file/d/1-dsHYenf3qD8Q2HGAAkBlyI2cZYGHjXJ/view?usp=drive_link])
 
 3. **Cambiar al directorio del repositorio**:
    - Una vez clonado el repositorio, cambia al directorio del mismo con el comando:
