@@ -3,7 +3,8 @@ Repositorio para organizar los códigos del proyecto
 
 # Tutorial de Uso de Git y GitHub con Visual Studio Code
 (Asegúrate de tener Git instalado en tu máquina. Si no lo tienes, puedes descargarlo desde https://git-scm.com/)
-¡Olaa!, Tremendo tutorial básico para empezar:
+
+## ¡Olaa!, Tremendo tutorial básico para empezar:
 
 1. **Abrir la terminal en Visual Studio Code**: 
    - Abre Visual Studio Code.
