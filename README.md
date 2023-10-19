@@ -1,87 +1,41 @@
-# The_big_proyect
-Repositorio para organizar los códigos del proyecto
+# Red Neuronal Convolucional para Procesamiento de Imágenes
 
-# Tutorial de Uso de Git y GitHub con Visual Studio Code
-(Asegúrate de tener Git instalado en tu máquina. Si no lo tienes, puedes descargarlo desde https://git-scm.com/)
+## Descripción
+Este proyecto implementa una red neuronal convolucional (CNN) para procesar imágenes. La CNN está diseñada para ser invariante a la rotación, lo que significa que puede reconocer patrones en imágenes independientemente de su orientación.
 
-## ¡Olaa!, Tremendo tutorial básico para empezar:
-
-1. **Abrir la terminal en Visual Studio Code**: 
-   - Abre Visual Studio Code.
-   - Ve a la parte superior y selecciona `Ver` y luego `Terminal`.
-   - Esto abrirá una terminal integrada en la parte inferior de tu editor.
-
-2. **Clonar el repositorio**: 
-   - En la terminal, ingresa:
-     ```
-     git clone https://github.com/milanPCJ/The_big_proyect.git
-     ```
-![Descripción de la imagen 1](https://drive.google.com/uc?export=view&id=1-dsHYenf3qD8Q2HGAAkBlyI2cZYGHjXJ)
+## Preprocesamiento de Datos con [Data.ipynb](https://github.com/milanPCJ/The_big_proyect/blob/main/Data.ipynb)
+1. Se utilizan las bibliotecas `pickle`, `matplotlib` y `numpy` para cargar y visualizar los datos.
+2. Se carga el archivo `td_ztf_stamp_17_06_20.pkl` que contiene los datos originales.
+3. Se exploran las claves y estructuras de los datos.
+4. Se separan las imágenes en sus tres componentes: science, reference y difference.
+5. Se verifica que todas las imágenes tengan las dimensiones correctas y no contengan valores NaN.
+6. Se recortan las imágenes a una dimensión de 21x21.
+7. Se verifica que las imágenes estén normalizadas en el rango [0, 1].
+8. Se lleva a cabo una serie de verificaciones para asegurar la integridad de los datos.
+9. Finalmente, se guardan los datos procesados en un archivo `processed_data.pkl`.
 
 
-3. **Cambiar al directorio del repositorio**:
-   - Una vez clonado el repositorio, cambia al directorio del mismo con el comando:
-     ```
-     cd The_big_proyect
-     ```
-![Descripción de la imagen 2](https://drive.google.com/uc?export=view&id=1VkVtdKfCdpAKFgg0-oNV65hOlcUePs-g)
+## Modelo Convolucional
+- El modelo consta de varios bloques de convolución seguidos de capas completamente conectadas (MLP).
+- Se implementa la invariancia rotacional mediante la rotación de las entradas y el pooling cíclico.
+- Se proporciona una función `predict` que permite realizar predicciones con el modelo en un conjunto de datos.
+- Se utiliza un dataloader para cargar los datos en lotes y alimentarlos al modelo.
+- Se evalúa el rendimiento del modelo utilizando una matriz de confusión, que visualiza las predicciones del modelo en comparación con las etiquetas verdaderas.
 
 
-4. **Cambiar a una rama existente o crear una nueva**: 
-   - Si la rama ya existe y deseas cambiar a ella:
-     ```
-     git checkout [nombre_de_la_rama]
-     ```
-   - Si deseas crear una nueva rama y cambiar a ella:
-     ```
-     git checkout -b [nombre_de_la_rama]
-     ```
+## Entrenamiento y Evaluación
+- Se define una función de entrenamiento que actualiza los pesos del modelo usando el optimizador Adam.
+- Se utiliza la función de pérdida de entropía cruzada para la clasificación.
+- Se implementa una lógica de "early stopping" para detener el entrenamiento si no se observan mejoras después de un cierto número de épocas.
+- Se visualizan las curvas de pérdida y precisión durante el entrenamiento.
 
-![Descripción de la imagen 3](https://drive.google.com/uc?export=view&id=1Fhs0WOZ-Yt3PJhRiah7_dYBzLbot9dDa)
-
-
-5. **Verificar el estado de tus cambios con `git status`**: 
-   - Antes de hacer cualquier operación, es una buena práctica verificar el estado de tus cambios. En la terminal, ingresa:
-     ```
-     git status
-     ```
-
-6. **Hacer y guardar cambios**: 
-   - Realiza tus cambios en el código.
-   - Asegúrate de guardar esos cambios en el editor.
-   - Una vez listo, en la terminal, ingresa:
-     ```
-     git add .
-     git commit -m "Mensaje descriptivo"
-     ```
-![Descripción de la imagen 4](https://drive.google.com/uc?export=view&id=1imTMfck6sb9Ox_K89Hf8a_pMfTD4o3lq)
-
-7. **Subir cambios a la rama en GitHub**: 
-   - En la terminal, ingresa:
-     ```
-     git push origin [nombre_de_la_rama]
-     ```
-![Descripción de la imagen 5](https://drive.google.com/uc?export=view&id=1T5k7XACxHmHoraFs1yVgthmx5ouXgTw_)
-
-
-![Descripción de la imagen 6](https://drive.google.com/uc?export=view&id=1XBCEcIOTxDY0zse488XNgGoLHFBsY_-y)
-
-8. **Crear un Pull Request en GitHub**: 
-   - Ve a tu repositorio en GitHub.
-   - Selecciona la rama que acabas de subir desde el menú desplegable de ramas.
-   - Haz clic en "New pull request".
-   - Selecciona la rama base (por lo general `main` o `master`) y la rama de comparación (tu rama).
-   - Revisa los cambios y, si todo está bien, haz clic en "Create pull request".
-   - Una vez que el Pull Request haya sido revisado, puedes fusionarlo en la rama principal desde la interfaz de GitHub.
-
-9. **Obtener actualizaciones**: 
-   - En la terminal, ingresa:
-     ```
-     git pull origin [nombre_de_la_rama_principal]
-     ```
-
-10. **Git Bash**: 
-   - Git Bash es una aplicación para Microsoft Windows que proporciona una emulación de la interfaz de línea de comandos de Git. Puedes usarlo en lugar de la terminal integrada de VS Code si prefieres una experiencia más cercana a la de una terminal Unix.
-
-
-
+## Instrucciones de Uso
+1. Asegúrate de tener todas las dependencias necesarias instaladas (PyTorch, numpy, matplotlib, etc.).
+2. Carga tu archivo .pkl con los datos preprocesados.
+3. Ejecuta el código para entrenar el modelo con tus datos.
+4. Prepara las imágenes para el modelo utilizando la función `preparar_imagenes_para_modelo`.
+5. Extrae las etiquetas utilizando la función `extraer_etiquetas`.
+6. Define un dataloader para cargar los datos en lotes.
+7. Utiliza la función `predict` para obtener las etiquetas verdaderas y predichas.
+8. Evalúa el rendimiento del modelo visualizando la matriz de confusión.
+9. Ajusta y repite según sea necesario para mejorar el rendimiento del modelo.
