@@ -1,0 +1,84 @@
+# The_big_proyect
+Repositorio para organizar los códigos del proyecto
+
+# Tutorial de Uso de Git y GitHub con Visual Studio Code
+(Asegúrate de tener Git instalado en tu máquina. Si no lo tienes, puedes descargarlo desde https://git-scm.com/)
+
+## ¡Olaa!, Tremendo tutorial básico para empezar:
+
+1. **Abrir la terminal en Visual Studio Code**: 
+   - Abre Visual Studio Code.
+   - Ve a la parte superior y selecciona `Ver` y luego `Terminal`.
+   - Esto abrirá una terminal integrada en la parte inferior de tu editor.
+
+2. **Clonar el repositorio**: 
+   - En la terminal, ingresa:
+     ```
+     git clone https://github.com/milanPCJ/The_big_proyect.git
+     ```
+![Descripción de la imagen 1](https://drive.google.com/uc?export=view&id=1-dsHYenf3qD8Q2HGAAkBlyI2cZYGHjXJ)
+
+
+3. **Cambiar al directorio del repositorio**:
+   - Una vez clonado el repositorio, cambia al directorio del mismo con el comando:
+     ```
+     cd The_big_proyect
+     ```
+![Descripción de la imagen 2](https://drive.google.com/uc?export=view&id=1VkVtdKfCdpAKFgg0-oNV65hOlcUePs-g)
+
+
+4. **Cambiar a una rama existente o crear una nueva**: 
+   - Si la rama ya existe y deseas cambiar a ella:
+     ```
+     git checkout [nombre_de_la_rama]
+     ```
+   - Si deseas crear una nueva rama y cambiar a ella:
+     ```
+     git checkout -b [nombre_de_la_rama]
+     ```
+
+![Descripción de la imagen 3](https://drive.google.com/uc?export=view&id=1Fhs0WOZ-Yt3PJhRiah7_dYBzLbot9dDa)
+
+
+5. **Verificar el estado de tus cambios con `git status`**: 
+   - Antes de hacer cualquier operación, es una buena práctica verificar el estado de tus cambios. En la terminal, ingresa:
+     ```
+     git status
+     ```
+
+6. **Hacer y guardar cambios**: 
+   - Realiza tus cambios en el código.
+   - Asegúrate de guardar esos cambios en el editor.
+   - Una vez listo, en la terminal, ingresa:
+     ```
+     git add .
+     git commit -m "Mensaje descriptivo"
+     ```
+![Descripción de la imagen 4](https://drive.google.com/uc?export=view&id=1imTMfck6sb9Ox_K89Hf8a_pMfTD4o3lq)
+
+7. **Subir cambios a la rama en GitHub**: 
+   - En la terminal, ingresa:
+     ```
+     git push origin [nombre_de_la_rama]
+     ```
+![Descripción de la imagen 5](https://drive.google.com/uc?export=view&id=1T5k7XACxHmHoraFs1yVgthmx5ouXgTw_)
+
+
+![Descripción de la imagen 6](https://drive.google.com/uc?export=view&id=1XBCEcIOTxDY0zse488XNgGoLHFBsY_-y)
+
+8. **Crear un Pull Request en GitHub**: 
+   - Ve a tu repositorio en GitHub.
+   - Selecciona la rama que acabas de subir desde el menú desplegable de ramas.
+   - Haz clic en "New pull request".
+   - Selecciona la rama base (por lo general `main` o `master`) y la rama de comparación (tu rama).
+   - Revisa los cambios y, si todo está bien, haz clic en "Create pull request".
+   - Una vez que el Pull Request haya sido revisado, puedes fusionarlo en la rama principal desde la interfaz de GitHub.
+
+9. **Obtener actualizaciones**: 
+   - En la terminal, ingresa:
+     ```
+     git pull origin [nombre_de_la_rama_principal]
+     ```
+
+10. **Git Bash**: 
+   - Git Bash es una aplicación para Microsoft Windows que proporciona una emulación de la interfaz de línea de comandos de Git. Puedes usarlo en lugar de la terminal integrada de VS Code si prefieres una experiencia más cercana a la de una terminal Unix.
